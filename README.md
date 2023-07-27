@@ -6,7 +6,7 @@
 
 - 備妥 Microsoft Azure 訂閱帳號
 - 已經申請核准建立妥 Azure OpenAI Service 資源
-- 已經於 Azure AI Studio 內建力好以下模型之部署 (deployment)
+- 已經於 Azure AI Studio 內建立好以下模型之部署 (deployment)
     + gpt-35-turbo
     + text-embedding-ada-002
     + text-davinci-003
