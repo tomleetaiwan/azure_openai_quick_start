@@ -15,8 +15,8 @@
 
 ## 設定作業系統之環境變數
 當建妥 Azure OPENAI Service，透過 Azure Portal 取得呼叫所需的 API 鍵值與呼叫端點，設定以下三個環境變數
-- **AZURE_OPENAI_ENDPOINT**  API 呼叫端點，例如 'https://<您的 Azure OpenAI 資源名稱>.openai.azure.com/'
-- **AZURE_OPENAI_API_KEY** 所需之 API 鍵值，例如 '1234567890abcdef1234567890abcdef'
+- **OPENAI_API_BASE**  API 呼叫端點，例如 'https://<您的 Azure OpenAI 資源名稱>.openai.azure.com/'
+- **OPENAI_API_KEY** 所需之 API 鍵值，例如 '1234567890abcdef1234567890abcdef'
 - **DEPLOYMENT_NAME**  所建立的模型部署名稱。例如 'gpt-35-turbo' 
 
 若不想透過環境變數設定，則可直接修改本 Notebook 中的程式碼，例如:
