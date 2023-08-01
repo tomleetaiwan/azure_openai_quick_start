@@ -29,4 +29,13 @@ RESOURCE_ENDPOINT = os.getenv('OPENAI_API_BASE','https://<您的 Azure OpenAI �
 MODEL = os.getenv('DEPLOYMENT_NAME','gpt-35-turbo').strip()
  ```
 
+本範例採用了 Python dotenv 套件，環境變數也可以寫在 .env 檔案中，例如:
+
+```bash
+OPENAI_API_KEY='1234567890abcdef1234567890abcdef'
+OPENAI_API_BASE=https://<您的 Azure OpenAI 資源名稱>.openai.azure.com/
+DEPLOYMENT_NAME=gpt-35-turbo
+```
+
+
 ## 逐一執行本 Notebook 中的程式碼
