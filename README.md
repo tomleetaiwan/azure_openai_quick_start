@@ -18,24 +18,25 @@
 - **OPENAI_API_BASE**  API 呼叫端點，例如 'https://<您的 Azure OpenAI 資源名稱>.openai.azure.com/'
 - **OPENAI_API_KEY** 所需之 API 鍵值，例如 '1234567890abcdef1234567890abcdef'
 - **DEPLOYMENT_NAME**  所建立的模型部署名稱。例如 'gpt-35-turbo' 
-
+- **OPENAI_API_TYPE** 使用的是 Microsoft Azure 所提供的 Azire OpenAI Service，固定設定為 'azure'
+- **OPENAI_API_VERSION** 設定目前 Azire OpenAI Service 所支援之 OpenAI API 版本，例如 '2023-05-15'
 若不想透過環境變數設定，則可直接修改本 Notebook 中的程式碼，例如:
 
  ```python
-API_KEY = os.getenv('OPENAI_API_KEY','1234567890abcdef1234567890abcdef').strip()
-....
-RESOURCE_ENDPOINT = os.getenv('OPENAI_API_BASE','https://<您的 Azure OpenAI 資源名稱>.openai.azure.com/').strip()
-...
-MODEL = os.getenv('DEPLOYMENT_NAME','gpt-35-turbo').strip()
- ```
+API_KEY = os.getenv('OPENAI_API_KEY','1234567890abcdef1234567890abcdef')
+RESOURCE_ENDPOINT = os.getenv('OPENAI_API_BASE','https://<您的 Azure OpenAI 資源名稱>.openai.azure.com/')
+MODEL = os.getenv('DEPLOYMENT_NAME','gpt-35-turbo')
+openai.api_type = os.getenv('OPENAI_API_TYPE','azure')
+openai.api_version = os.getenv('OPENAI_API_VERSION','2023-05-15')
+```
 
 本範例採用了 Python dotenv 套件，環境變數也可以寫在 .env 檔案中，例如:
 
 ```bash
-OPENAI_API_KEY='1234567890abcdef1234567890abcdef'
+OPENAI_API_KEY=1234567890abcdef1234567890abcdef
 OPENAI_API_BASE=https://<您的 Azure OpenAI 資源名稱>.openai.azure.com/
 DEPLOYMENT_NAME=gpt-35-turbo
+OPENAI_API_VERSION=2023-05-15
+OPENAI_API_TYPE=azure
 ```
-
-
 ## 逐一執行本 Notebook 中的程式碼
