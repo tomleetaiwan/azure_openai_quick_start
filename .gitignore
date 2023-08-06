@@ -79,6 +79,10 @@ target/
 # dotenv
 .env
 
+# FAISS Vector Store
+*.faiss
+*.pkl
+
 # celery beat schedule file
 celerybeat-schedule
 
